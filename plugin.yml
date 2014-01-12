@@ -1,0 +1,8 @@
+name: LWCDeadbolt
+version: 0.01
+main: com.massivecraft.lwcdeadbolt.LWCDeadbolt
+authors: [yendor46]
+description: LWCDeadbolt denies creation of LWC Protections on a block protected by Deadbolt.  
+load: POSTWORLD
+depend: [ LWC, Deadbolt ]
+class-loader-of: LWC
