@@ -29,6 +29,7 @@ public class LWCDeadboltModule extends JavaModule
 	{
 
 		String owner = Deadbolt.getOwnerName(event.getBlock());
+		if (owner == null) return;
 		String player = event.getPlayer().getName();
 		player = player.substring(0, Math.min(player.length(), 15));
 		if (owner.equalsIgnoreCase(player)) return;
