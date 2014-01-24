@@ -7,12 +7,12 @@ import com.daemitus.deadbolt.Deadbolt;
 
 public class LWCDeadboltModule extends JavaModule
 {
-
 	/**
 	 * The bukkit plugin
 	 */
 	@SuppressWarnings("unused")
 	private LWCDeadbolt plugin;
+	
 	/**
 	 * The LWC object, set by load ()
 	 */
@@ -27,13 +27,12 @@ public class LWCDeadboltModule extends JavaModule
 	@Override
 	public void onRegisterProtection(LWCProtectionRegisterEvent event)
 	{
-
 		String owner = Deadbolt.getOwnerName(event.getBlock());
 		if (owner == null) return;
 		String player = event.getPlayer().getName();
 		player = player.substring(0, Math.min(player.length(), 15));
 		if (owner.equalsIgnoreCase(player)) return;
 		event.setCancelled(true);
-
 	}
+	
 }

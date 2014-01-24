@@ -16,8 +16,7 @@ public class LWCDeadbolt extends JavaPlugin
 	 */
 	public void init()
 	{
-		LWC.getInstance().getModuleLoader()
-				.registerModule(this, new LWCDeadboltModule(this));
+		LWC.getInstance().getModuleLoader().registerModule(this, new LWCDeadboltModule(this));
 		log("Hooked into LWC!");
 	}
 
@@ -32,7 +31,6 @@ public class LWCDeadbolt extends JavaPlugin
 		}
 		else
 		{
-
 			log("Waiting for LWC to be enabled...");
 		}
 	}
@@ -41,4 +39,5 @@ public class LWCDeadbolt extends JavaPlugin
 	{
 		logger.info("LWC-Deadbolt: " + message);
 	}
+	
 }
